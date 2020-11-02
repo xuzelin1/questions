@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: auto;
+      margin-top: 100px;
+      position: relative;
+      line-height: 16px;
+      box-sizing: content-box;
+    }
+    div:hover::after {
+      content: attr(content);
+      position: absolute;
+      top: -100%;
+      background-color: #efefef;
+      padding: 3px 5px;
+    }
+  </style>
+</head>
+<body>
+  <div content="前端学习相关知识——属性">前端学习...</div>
+
+  <input type="text" onchange="changeInput">
+  <ul>
+
+  </ul>
+</body>
+<script>
+  document.getElementById
+</script>
+</html>

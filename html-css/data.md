@@ -53,6 +53,33 @@ dataset 属性可以被读取和写入，但是写入必须是它的属性，比
 
 DOMStringMap
 
+## CSS 与 Attribute
+
+CSS 中，可以使用 `attr()` 来处理元素中的属性，比如下面这个例子就可以实现悬浮展示一些提示信息，通过attr
+
+```html
+<div content="前端学习相关知识——属性">前端学习...</div>
+```
+
+```css
+  div {
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    line-height: 16px;
+    box-sizing: content-box;
+  }
+  div:hover::after {
+    content: attr(content);
+    position: absolute;
+    top: -100%;
+    background-color: #efefef;
+    padding: 3px 5px;
+  }
+```
+
+使用 attr 的话相对可以实现的功能较有限，当使用 data-* 时，我们可以利用 HTML 的属性做得更多。我们可以通过这个特殊的属性来做选择器。
+
 ## 参考文章
 
 [HTML5中的 data-* 如何处理数据详解](https://github.com/lvzhenbang/article/blob/master/js/data-attribute.md)
